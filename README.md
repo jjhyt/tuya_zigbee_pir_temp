@@ -1,3 +1,6 @@
+本工程硬件开源地址:https://oshwhub.com/520world/tu-ya-di-gong-hao-ren-ti-wen-shi-du
+最终使用程序为 tuya-zigbee-pir-sht30-2 里面的源码!
+
 学习笔记:
 
 =============================移植开始!!!!!!!!!

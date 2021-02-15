@@ -335,7 +335,4 @@ void setup(){
   Serial.print( "Written custom data type! \n\nView the example sketch eeprom_get to see how you can retrieve the values!" );
 }
 
-Ê×´Îpush:
-git init
-git add .
-git commit -m ¡°first push¡±
+
