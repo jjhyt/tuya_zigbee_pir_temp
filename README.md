@@ -1,5 +1,8 @@
 本工程硬件开源地址:https://oshwhub.com/520world/tu-ya-di-gong-hao-ren-ti-wen-shi-du
-最终使用程序为 tuya-zigbee-pir-sht30-2 里面的源码!
+
+经测试tuya-zigbee-pir-sht30-2里的程序功耗有点高,2032电池只坚持了3天,帮有了第3版程序!
+
+最终使用程序为 tuya-zigbee-pir-sht30-3 里面的源码!
 
 学习笔记:
 
@@ -41,7 +44,8 @@ Serial.write(value);
 --------------SLEEP_TIME = 10;      
 
 // 上报温湿度间隔时间,看门狗周期为8秒,故上报时间为设置数*8秒 0=75=10Min 1=150=20Min 2=225=30Min
-代码先留空待填?????????????????????
+
+代码写了,但是不起效果,可能我的是低功耗模式的问题!
 
 -------------
 5.dp_download_pir_time_handle  
@@ -49,13 +53,17 @@ Serial.write(value);
 这里要写取得服务器设置的PIR保持时间后的MCU操作:设置:0=30秒,1=60秒,2=120秒,默认30秒
 
 --------------pirTimeSet    //PIR保持时间设置,默认0=4*8=32秒 1=8*8 2=15*8
-代码先留空待填?????????????????????
+
+代码写了,但是不起效果,可能我的是低功耗模式的问题!
+
 -------------
 
 6.zigbee_work_state_event 这里是判断zigbee的在网状态处理函数,程序里是要用到的!
 
 --------------zigbeeStated       //zigbee网络状态 1=未入网,2=入网中,3=已入网,4=出错
-代码先留空待填??????????两个CPP间变量不知道怎么传递,只能读写内存了!
+
+代码写了,但是不起效果,可能我的是低功耗模式的问题!
+
 -------------
 
 7.mcu_write_rtctime 时间的处理函数,注释掉error
@@ -73,6 +81,7 @@ protocol.h
 system.cpp
 
 1.#include "zigbee.h" 
+
 后加:(否则编译会出错,不知道什么原因说这个函数没有申明?涂鸦的程序写的有问题?)
 SYSTEM_EXTERN unsigned char current_mcu_pid[8];	///< current mcu pid
 
